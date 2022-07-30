@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import "./Register.css";
 import auth from "../../../firebase.init";
-import PageTitle from "../../Shared/Header/PageTitle/PageTitle";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const Register = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =

@@ -3,7 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
-import PageTitle from "../../Shared/Header/PageTitle/PageTitle";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const Login = () => {
   const emailRef = useRef("");

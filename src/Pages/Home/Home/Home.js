@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
-import PageTitle from '../../Shared/Header/PageTitle/PageTitle';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 import Banner from '../Banner/Banner';
 import Experts from '../Experts/Experts';
 import Services from '../Services/Services';

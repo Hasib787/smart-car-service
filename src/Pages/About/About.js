@@ -1,5 +1,5 @@
 import React from 'react';
-import PageTitle from '../Shared/Header/PageTitle/PageTitle';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const About = () => {
     return (
