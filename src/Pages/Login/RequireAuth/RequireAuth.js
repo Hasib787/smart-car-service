@@ -5,10 +5,10 @@ import {
 } from "react-firebase-hooks/auth";
 import { Navigate, useLocation } from "react-router-dom";
 import auth from "../../../firebase.init";
+import { ToastContainer, toast } from "react-toastify";
 
 const RequireAuth = ({ children }) => {
-  const [sendEmailVerification, sending, error] =
-    useSendEmailVerification(auth);
+  const [sendEmailVerification] = useSendEmailVerification(auth);
   const [user] = useAuthState(auth);
   const location = useLocation();
   if (!user) {
@@ -24,11 +24,12 @@ const RequireAuth = ({ children }) => {
           className="btn btn-primary"
           onClick={async () => {
             await sendEmailVerification();
-            alert("Mail Send")
+            toast.success("Email Send");
           }}
         >
           Verify Email
         </button>
+        <ToastContainer autoClose={3000} theme="colored" />
       </div>
     );
   }

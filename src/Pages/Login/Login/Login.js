@@ -4,6 +4,7 @@ import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import PageTitle from "../../Shared/PageTitle/PageTitle";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Login = () => {
   const emailRef = useRef("");
@@ -26,6 +27,7 @@ const Login = () => {
     const password = passwordRef.current.value;
 
     signInWithEmailAndPassword(email, password);
+    toast.success("Login successful")
   };
 
   const navigateRegister = (event) => {
@@ -76,6 +78,7 @@ const Login = () => {
           Please Register
         </Link>{" "}
       </p>
+      <ToastContainer />
     </div>
   );
 };
