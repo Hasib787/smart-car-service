@@ -21,12 +21,6 @@ const Checkout = () => {
         </div>
       </div>
     </div>
-    // <div className="container text-center border border-dark mt-5">
-    //   <h2>Please Checkout your booking</h2>
-    //   <Elements stripe={stripePromise}>
-    //     <Payment />
-    //   </Elements>
-    // </div>
   );
 };
 
